@@ -39,13 +39,9 @@ class TokenService
     {
         try {
             $token = (new Parser)->parse($token);
-        }
-        catch (RuntimeException $e)
-        {
+        } catch (RuntimeException $e) {
             throw new UserNotFoundException;
-        }
-        catch (InvalidArgumentException $e)
-        {
+        } catch (InvalidArgumentException $e) {
             throw new UserNotFoundException;
         }
 
@@ -54,8 +50,7 @@ class TokenService
 
         $user = app($userClass)->findByQualifiedKeyForToken($claims['id']->getValue());
 
-        if (!$user)
-        {
+        if (!$user) {
             throw new UserNotFoundException;
         }
 
@@ -65,8 +60,7 @@ class TokenService
         $validationData->setIssuer(app('config')->get('laravel-jwt.issuer'));
         $validationData->setId($userHash);
 
-        if ($token->validate($validationData))
-        {
+        if ($token->validate($validationData)) {
             return $user;
         }
 
@@ -78,9 +72,7 @@ class TokenService
         try {
             $this->getUserByToken($token);
             return true;
-        }
-        catch (UserNotFoundException $exception)
-        {
+        } catch (UserNotFoundException $exception) {
             return false;
         }
     }
