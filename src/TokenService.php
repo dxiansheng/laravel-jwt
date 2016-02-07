@@ -70,7 +70,7 @@ class TokenService
     public function tokenIsValid($token)
     {
         try {
-            $this->getUserByToken($token);
+            $this->findUserByTokenOrFail($token);
             return true;
         } catch (UserNotFoundException $exception) {
             return false;

@@ -62,6 +62,7 @@ class TokenServiceTest extends TestCase
         $user = $this->getService()->findUserByTokenOrFail($token);
 
         $this->assertInstanceOf(UserStub::class, $user);
+        $this->assertTrue($this->getService()->tokenIsValid($token));
     }
 
     /**
@@ -69,6 +70,9 @@ class TokenServiceTest extends TestCase
      */
     public function testInvalidToken()
     {
-        $this->getService()->findUserByTokenOrFail('Whoops.Not.Valid');
+        $token = 'Whoops.Not.Valid';
+
+        $this->getService()->findUserByTokenOrFail($token);
+        $this->assertFalse($this->getService()->tokenIsValid($token));
     }
 }
