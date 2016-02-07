@@ -33,9 +33,9 @@ return [
 ];
 ```
 
-Then publish the config file:
+Then publish the config file and update it to your needs:
 ``` bash
-& php artisan vendor:publish --provider=Pbmedia\Jwt\JwtServiceProvider
+$ php artisan vendor:publish --provider=Pbmedia\Jwt\JwtServiceProvider
 ```
 
 
