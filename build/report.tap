@@ -1,3 +1,6 @@
 TAP version 13
-not ok 1 - Error: Pbmedia\Jwt\Test\TokenServiceTest::testGenerateHashForUser
-1..1
+ok 1 - Pbmedia\Jwt\Test\TokenServiceTest::testGenerateHashForUser
+ok 2 - Pbmedia\Jwt\Test\TokenServiceTest::testGenerateTokenForUser
+ok 3 - Pbmedia\Jwt\Test\TokenServiceTest::testFindUserByTokenOrFail
+ok 4 - Pbmedia\Jwt\Test\TokenServiceTest::testInvalidToken
+1..4
