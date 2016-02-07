@@ -1,4 +1,4 @@
-# jwt
+# pascalbaljetmedia/laravel-jwt
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -7,8 +7,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+Simple JWT service for Laravel
 
 ## Install
 
@@ -20,8 +19,34 @@ $ composer require pascalbaljetmedia/laravel-jwt
 
 ## Usage
 
+First make sure your User Model implements ```AuthenticatableInterface```:
 ``` php
+use Pbmedia\Jwt\AuthenticatableInterface;
 
+class User extends Model implements AuthenticatableInterface
+{
+    public function findByQualifiedKeyForToken($id)
+    {
+        return static::find($id);
+    }
+
+    public function getQualifiedKeyForToken()
+    {
+        return $this->getKey();
+    }
+}
+```
+
+Now you can use ```TokenService``` to generate tokens, find users and validate tokens:
+``` php
+use Pbmedia\Jwt\TokenService;
+
+$service = new TokenService;
+$user = User::first();
+
+$token = (string) $service->generateTokenForUser($user);
+$user = $service->findUserByTokenOrFail($token);
+$validToken = $service->tokenIsValid($token);
 ```
 
 ## Change log
