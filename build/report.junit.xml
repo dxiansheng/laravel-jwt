@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="pbmedia/laravel-jwt Test Suite" tests="4" assertions="6" failures="0" errors="0" time="0.069236">
-    <testsuite name="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" tests="4" assertions="6" failures="0" errors="0" time="0.069236">
-      <testcase name="testGenerateHashForUser" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="24" assertions="2" time="0.058449"/>
-      <testcase name="testGenerateTokenForUser" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="37" assertions="1" time="0.006396"/>
-      <testcase name="testFindUserByTokenOrFail" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="58" assertions="2" time="0.002486"/>
-      <testcase name="testInvalidToken" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="71" assertions="1" time="0.001905"/>
+  <testsuite name="pbmedia/laravel-jwt Test Suite" tests="5" assertions="6" failures="0" errors="0" time="0.030509">
+    <testsuite name="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" tests="5" assertions="6" failures="0" errors="0" time="0.030509">
+      <testcase name="testGenerateHashForUser" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="25" assertions="2" time="0.021903"/>
+      <testcase name="testGenerateTokenForUser" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="38" assertions="1" time="0.002804"/>
+      <testcase name="testFindUserByTokenOrFail" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="59" assertions="1" time="0.002754"/>
+      <testcase name="testTokenIsValid" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="83" assertions="1" time="0.001595"/>
+      <testcase name="testInvalidToken" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="92" assertions="1" time="0.001453"/>
     </testsuite>
   </testsuite>
 </testsuites>
