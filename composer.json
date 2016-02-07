@@ -1,5 +1,5 @@
 {
-    "name": "pascalbaljetmedia/jwt",
+    "name": "pascalbaljetmedia/laravel-jwt",
     "type": "library",
     "description": "JWT for Laravel",
     "keywords": [
@@ -8,7 +8,7 @@
         "laravel",
         "json"
     ],
-    "homepage": "https://github.com/pascalbaljetmedia/jwt",
+    "homepage": "https://github.com/pascalbaljetmedia/laravel-jwt",
     "license": "MIT",
     "authors": [
         {
