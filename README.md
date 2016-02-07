@@ -19,7 +19,27 @@ $ composer require pascalbaljetmedia/laravel-jwt
 
 ## Usage
 
-First make sure your User Model implements ```AuthenticatableInterface```:
+Add the Laravel Service Provider and Facade to your ```app.php``` config file:
+
+``` php
+return [
+    'providers' => [
+        Pbmedia\Jwt\JwtServiceProvider::class,
+    ],
+
+    'aliases' => [
+        'Jwt' => Pbmedia\Jwt\JwtFacade::class,
+    ]
+];
+```
+
+Then publish the config file:
+``` bash
+& php artisan vendor:publish --provider=Pbmedia\Jwt\JwtServiceProvider
+```
+
+
+Make sure your User Model implements ```AuthenticatableInterface```:
 ``` php
 use Pbmedia\Jwt\AuthenticatableInterface;
 
@@ -39,14 +59,13 @@ class User extends Model implements AuthenticatableInterface
 
 Now you can use ```TokenService``` to generate tokens, find users and validate tokens:
 ``` php
-use Pbmedia\Jwt\TokenService;
+use \Jwt;
 
-$service = new TokenService;
 $user = User::first();
 
-$token = (string) $service->generateTokenForUser($user);
-$user = $service->findUserByTokenOrFail($token);
-$validToken = $service->tokenIsValid($token);
+$token = (string) Jwt::generateTokenForUser($user);
+$user = Jwt::findUserByTokenOrFail($token);
+$validToken = Jwt::tokenIsValid($token);
 ```
 
 ## Change log
