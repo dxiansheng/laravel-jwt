@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" tests="1" assertions="0" failures="0" errors="1" time="0.034629">
+    <testcase name="testGenerateHashForUser" class="Pbmedia\Jwt\Test\TokenServiceTest" file="/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php" line="16" assertions="0" time="0.034629">
+      <error type="PHPUnit_Framework_ExceptionWrapper">Pbmedia\Jwt\Test\TokenServiceTest::testGenerateHashForUser
+Error: Class 'Mockery' not found
+
+/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:86
+/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:65
+/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:51
+/Users/pascalbaljet/Sites/laravel-jwt/vendor/pascalbaljetmedia/laravel-jwt/tests/TokenServiceTest.php:18
+</error>
+    </testcase>
+  </testsuite>
+</testsuites>

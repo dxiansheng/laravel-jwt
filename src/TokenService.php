@@ -10,6 +10,15 @@ use Lcobucci\JWT\ValidationData;
 
 class TokenService
 {
+    public function generateHashForUser(AuthenticatableInterface $user, $time = null)
+    {
+        return md5(json_encode([
+            config('laravel-jwt.issuer'),
+            $user->getQualifiedKeyForToken(),
+            ($time ?: time()) + 1800,
+        ]));
+    }
+
     public function generateTokenForUser(AuthenticatableInterface $user)
     {
         $time = time();
@@ -25,20 +34,13 @@ class TokenService
             ->getToken();
     }
 
-    public function generateHashForUser(AuthenticatableInterface $user, $time = null)
-    {
-        return md5(json_encode([
-            config('laravel-jwt.issuer'),
-            $user->getQualifiedKeyForToken(),
-            ($time ?: time()) + 1800,
-        ]));
-    }
-
     public function getUserByToken($token)
     {
         try {
             $token = (new Parser)->parse($token);
-        } catch (InvalidArgumentException $e) {
+        }
+        catch (InvalidArgumentException $e)
+        {
             throw new UserNotFoundException;
         }
 
@@ -47,7 +49,8 @@ class TokenService
 
         $user = app($userClass)->findByQualifiedKeyForToken($claims['id']->getValue());
 
-        if (!$user) {
+        if (!$user)
+        {
             throw new UserNotFoundException;
         }
 
@@ -57,7 +60,8 @@ class TokenService
         $validationData->setIssuer(config('laravel-jwt.issuer'));
         $validationData->setId($userHash);
 
-        if ($token->validate($validationData)) {
+        if ($token->validate($validationData))
+        {
             return $user;
         }
 
@@ -69,7 +73,9 @@ class TokenService
         try {
             $this->getUserByToken($token);
             return true;
-        } catch (UserNotFoundException $exception) {
+        }
+        catch (UserNotFoundException $exception)
+        {
             return false;
         }
     }
