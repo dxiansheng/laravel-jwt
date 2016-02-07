@@ -15,7 +15,7 @@ PSRs you support to avoid any confusion with users and contributors.
 Via Composer
 
 ``` bash
-$ composer require pascalbaljetmedia/jwt
+$ composer require pascalbaljetmedia/laravel-jwt
 ```
 
 ## Usage
@@ -51,17 +51,17 @@ If you discover any security related issues, please email pascal@pascalbaljetmed
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/pascalbaljetmedia/jwt.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/pascalbaljetmedia/laravel-jwt.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/pascalbaljetmedia/jwt/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/pascalbaljetmedia/jwt.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/pascalbaljetmedia/jwt.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/pascalbaljetmedia/jwt.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/pascalbaljetmedia/laravel-jwt/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/pascalbaljetmedia/laravel-jwt.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/pascalbaljetmedia/laravel-jwt.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/pascalbaljetmedia/laravel-jwt.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/pascalbaljetmedia/jwt
-[link-travis]: https://travis-ci.org/pascalbaljetmedia/jwt
-[link-scrutinizer]: https://scrutinizer-ci.com/g/pascalbaljetmedia/jwt/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/pascalbaljetmedia/jwt
-[link-downloads]: https://packagist.org/packages/pascalbaljetmedia/jwt
+[link-packagist]: https://packagist.org/packages/pascalbaljetmedia/laravel-jwt
+[link-travis]: https://travis-ci.org/pascalbaljetmedia/laravel-jwt
+[link-scrutinizer]: https://scrutinizer-ci.com/g/pascalbaljetmedia/laravel-jwt/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/pascalbaljetmedia/laravel-jwt
+[link-downloads]: https://packagist.org/packages/pascalbaljetmedia/laravel-jwt
 [link-author]: https://github.com/pascalbaljetmedia
 [link-contributors]: ../../contributors
