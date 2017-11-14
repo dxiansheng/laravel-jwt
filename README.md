@@ -1,3 +1,5 @@
+> **Important: This package is not actively maintained.** Please switch to [Laravel Passport](https://laravel.com/docs/5.5/passport#consuming-your-api-with-javascript), a first-party package with support for JWT.
+
 # pascalbaljetmedia/laravel-jwt
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
